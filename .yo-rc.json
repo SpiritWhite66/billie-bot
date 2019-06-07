@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.vgui.app",
+      "nativeLanguage": "fr"
+    },
+    "jhipsterVersion": "6.0.1",
+    "applicationType": "microservice",
+    "baseName": "bot",
+    "packageName": "com.vgui.app",
+    "packageFolder": "com/vgui/app",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ODU5MTZjMzNiMGYxNTU5MzA5MDk4M2Q2NTg0MmUzZDczM2Y3ZDI0OWRiZWNkNzQyYjIzYTUxMDgxZWE5YTczYTBkOTVlNTdhMWQ1NTFkODk1ZWQ4NmYxYTMzYTYyYjNlNDg2ZGM2YmFiYzYzMWRiYmRmYjM4YmQ1YjUzZGJhYzQ=",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "clientPackageManager": "npm",
+    "nativeLanguage": "fr",
+    "languages": [
+      "fr"
+    ],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
