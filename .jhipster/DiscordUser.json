@@ -1,0 +1,37 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "bot",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "pseudo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "unique"
+            ]
+        },
+        {
+            "fieldName": "birthday",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "idDiscord",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "unique"
+            ]
+        }
+    ],
+    "changelogDate": "20190607194809",
+    "dto": "no",
+    "searchEngine": false,
+    "service": "serviceImpl",
+    "entityTableName": "discord_user",
+    "databaseType": "sql",
+    "jpaMetamodelFiltering": true,
+    "pagination": "no",
+    "microserviceName": "bot"
+}

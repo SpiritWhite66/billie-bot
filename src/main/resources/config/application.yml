@@ -190,4 +190,5 @@ jhipster:
 # https://www.jhipster.tech/common-application-properties/
 # ===================================================================
 
-# application:
+application:
+  token: 'NTg3MDIwODU4NTE4NjY3Mjcz.XPwgEg.lAPfbJrNdMfHyEu0Hi2sWnTyP5A'

@@ -10,7 +10,11 @@
     <name>Bot</name>
 
     <repositories>
-        <!-- jhipster-needle-maven-repository -->
+        <repository>
+            <id>jcenter</id>
+            <name>jcenter-bintray</name>
+            <url>http://jcenter.bintray.com</url>
+        </repository>
     </repositories>
 
     <pluginRepositories>
@@ -346,6 +350,11 @@
             <artifactId>metrics-core</artifactId>
         </dependency>
         <!-- jhipster-needle-maven-add-dependency -->
+        <dependency>
+            <groupId>net.dv8tion</groupId>
+            <artifactId>JDA</artifactId>
+            <version>3.6.0_373</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -2,6 +2,7 @@ package com.vgui.app;
 
 import com.vgui.app.config.ApplicationProperties;
 import com.vgui.app.config.DefaultProfileUtil;
+import com.vgui.app.service.DiscordBotService;
 
 import io.github.jhipster.config.JHipsterConstants;
 
@@ -9,6 +10,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties;
@@ -24,14 +27,18 @@ import java.util.Collection;
 @SpringBootApplication
 @EnableConfigurationProperties({LiquibaseProperties.class, ApplicationProperties.class})
 @EnableDiscoveryClient
-public class BotApp implements InitializingBean {
+public class BotApp implements InitializingBean, CommandLineRunner {
 
     private static final Logger log = LoggerFactory.getLogger(BotApp.class);
 
     private final Environment env;
 
-    public BotApp(Environment env) {
+    @Autowired
+    private final DiscordBotService botService;
+
+    public BotApp(Environment env, DiscordBotService botService) {
         this.env = env;
+        this.botService = botService;
     }
 
     /**
@@ -65,7 +72,10 @@ public class BotApp implements InitializingBean {
         Environment env = app.run(args).getEnvironment();
         logApplicationStartup(env);
     }
-
+    @Override
+    public void run(String ... args) throws Exception {
+        botService.start();
+    }
     private static void logApplicationStartup(Environment env) {
         String protocol = "http";
         if (env.getProperty("server.ssl.key-store") != null) {

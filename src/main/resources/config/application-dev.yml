@@ -138,6 +138,8 @@ jhipster:
       host: localhost
       port: 5000
       queue-size: 512
+
+
 # ===================================================================
 # Application specific properties
 # Add your own application properties here, see the ApplicationProperties class
@@ -147,4 +149,5 @@ jhipster:
 # https://www.jhipster.tech/common-application-properties/
 # ===================================================================
 
-# application:
+application:
+  token: NTg3MDIwODU4NTE4NjY3Mjcz.XPwgEg.lAPfbJrNdMfHyEu0Hi2sWnTyP5A
